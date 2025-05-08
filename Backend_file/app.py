@@ -1,3 +1,5 @@
+# NOTE -> Line no. 14, 27 contain confidential data make your own
+
 # Import necessary libraries
 import os
 import re
@@ -22,7 +24,7 @@ os.environ["KMP_DUPLICATE_LIB_OK"] = "TRUE"
 app = Flask(__name__)
 
 # Enable CORS (Cross-Origin Resource Sharing) for the specified Chrome extension
-CORS(app, origins=["chrome-extension://dcejgamfpekagldgiepiapfjcklpjhdb"])
+CORS(app, origins=["chrome-extension://<unique_chrome_extention_id>"])
 
 # Utility function to extract YouTube video ID from various URL formats
 def extract_video_id(url):
