@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AskYOU</title>
+  <script src="popup.js" defer></script>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: transparent;
+    }
+
+    body {
+      width: 350px;
+      height: auto;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #dadfe3; /* soft off-white background */
+    }
+
+    .container {
+      background-color: #f9f9f6; /* off-white container */
+      padding: 20px;
+      margin: 3px;
+      width: 100%;
+    }
+
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 16px;
+    }
+
+    .header img {
+      width: 28px;
+      height: 28px;
+      margin-right: 8px;
+    }
+
+    .header h2 {
+      font-size: 20px;
+      color: #333;
+      margin: 0;
+    }
+
+    input, textarea {
+      width: 100%;
+      box-sizing: border-box;
+      margin-bottom: 12px;
+      padding: 10px;
+      border-radius: 12px;
+      border: 1px solid #ccc;
+      font-size: 14px;
+      background-color: #ffffff;
+      box-shadow: 0 0 16px rgba(0, 0, 0, 0.15);
+
+    }
+
+    ::placeholder {
+      color: #999;
+      text-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 60px;
+      color: rgb(2, 2, 2);
+    }
+
+    button {
+      width: 100%;
+      background-color: #4a90e2;
+      color: white;
+      border: none;
+      border-radius: 12px;
+      padding: 10px;
+      font-weight: bold;
+      font-size: 15px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #357ab8;
+    }
+
+    #response {
+      margin-top: 10px;
+      white-space: pre-wrap;
+      padding: 10px;
+      background: #fdfdfb; /* off-white for response area too */
+      border-radius: 12px;
+      border: 1px solid #ddd;
+      color: #444;
+      font-size: 14px;
+      max-height: 150px;
+      overflow-y: auto;
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 12px;
+      font-size: 12px;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h2>🤖QueryCast🎥</h2>
+    </div>
+    <input type="text" id="videoUrl" placeholder="YouTube URL" />
+    <textarea id="question" rows="3" placeholder="Beam me your question, Captain Curious..."></textarea>
+    <button id="askBtn">Ask</button>
+    <div id="response"></div>
+    <div class="footer">Made by SHIVAM AND SOORAJ</div>
+  </div>
+</body>
+</html>
